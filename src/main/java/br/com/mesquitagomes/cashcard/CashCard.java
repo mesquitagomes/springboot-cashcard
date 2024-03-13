@@ -1,29 +1,8 @@
 package br.com.mesquitagomes.cashcard;
 
-public class CashCard {
+import org.springframework.data.annotation.Id;
 
-    private Long id;
-    private Double amount;
-
-    public CashCard(Long id, Double amount) {
-        this.id = id;
-        this.amount = amount;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(Double amount) {
-        this.amount = amount;
-    }
-
+record CashCard(
+        @Id Long id,
+        Double amount) {
 }
